@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vshelpinghands-4bd08.web.app/sitemap.xml
+Sitemap: https://vshelpinghands.org/sitemap.xml
