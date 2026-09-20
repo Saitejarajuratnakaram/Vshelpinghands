@@ -81,29 +81,14 @@ function DonateModal({ onClose }) {
           <p className="text-sm font-bold" style={{color:C}}>❤️ 97% goes directly to the community</p>
           <p className="text-xs mt-1" style={{color:CA}}>FCRA Registered · Fully Audited · Complete Transparency</p>
         </div>
-        <div className="rounded-2xl p-5 mb-4" style={{border:`2px solid ${C}`}}>
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center font-extrabold text-white text-sm" style={{background:C}}>UPI</div>
-            <div>
-              <div className="font-bold text-gray-900 text-sm">Pay via UPI</div>
-              <div className="text-gray-400 text-xs">GPay · PhonePe · Paytm · BHIM</div>
-            </div>
-          </div>
-          <div className="bg-gray-50 rounded-xl p-3 flex items-center justify-between border border-gray-200">
-            <span className="font-mono font-bold text-gray-900 text-sm">vshelpinghands@upi</span>
-            <button onClick={() => copy('vshelpinghands@upi', 'upi')} className="text-xs text-white font-bold px-3 py-1.5 rounded-lg transition-colors" style={{background:C}}>
-              {copied === 'upi' ? '✓ Copied' : 'Copy'}
-            </button>
-          </div>
-        </div>
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5 mb-5">
           <div className="font-bold text-gray-900 text-sm mb-3">🏦 Bank Transfer (NEFT / IMPS / RTGS)</div>
           <div className="flex flex-col gap-2">
             {[
-              { label: 'Account Name', value: 'VS Helping Hands Welfare Association', key: 'name' },
-              { label: 'Account No.', value: '1234567890123', key: 'acc' },
-              { label: 'IFSC Code', value: 'SBIN0012345', key: 'ifsc' },
-              { label: 'Bank', value: 'State Bank of India, Banjara Hills', key: 'bank' },
+              { label: 'Account Name', value: 'VENKATA SOMU HELPING HANDS WELFARE ASSOCIATIONS.', key: 'name' },
+              { label: 'Account No.', value: '626010000002691', key: 'acc' },
+              { label: 'IFSC Code', value: 'UBINOCG7999', key: 'ifsc' },
+              { label: 'Bank', value: 'APGVB (Phydibheemavaram)', key: 'bank' },
             ].map((r, i) => (
               <div key={i} className="flex justify-between items-center py-1.5 border-b border-gray-100 last:border-0">
                 <span className="text-gray-500 text-xs">{r.label}</span>
