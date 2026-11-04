@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+const certificate = require('../img/registration-certificate.jpg');
 
 const team = [
   { name: 'Venkatesh Meesala', role: 'Founder & President', initials: 'VM', bio: 'Visionary founder who established VS Helping Hands in 2023 with a mission to serve underprivileged communities.' },
@@ -27,11 +28,11 @@ const awards = [
 ];
 
 const C = '#293939';
-const CL = '#eef3f3';
 const CB = '#d4e0e0';
 const CA = '#5a9090';
 
 export default function About({ navigate }) {
+  const [showCert, setShowCert] = useState(false);
   return (
     <div className="pt-16 md:pt-20">
 
@@ -92,8 +93,54 @@ export default function About({ navigate }) {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Legal Registration */}
       <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="font-bold text-sm uppercase tracking-widest" style={{color:C}}>Legal Status</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">Registered Welfare Society</h2>
+            <p className="text-gray-500 mt-3 max-w-2xl mx-auto text-sm leading-relaxed">
+              Officially registered under the Andhra Pradesh Societies Registration Act, 2001 with the Registrar of Societies, Srikakulam.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <button type="button" onClick={() => setShowCert(true)} className="bg-white rounded-2xl p-3 shadow-sm text-left" style={{border:`2px solid ${CB}`}}>
+              <img src={certificate} alt="Certificate of Registration — Venkata Somu Helping Hands Welfare Association" className="w-full rounded-xl" />
+              <p className="text-center text-xs text-gray-400 mt-2">Tap to view full certificate</p>
+            </button>
+            <div>
+              <div className="flex flex-col gap-3">
+                {[
+                  { label: 'Name of the Society', value: 'VENKATA SOMU HELPING HANDS WELFARE ASSOCIATION' },
+                  { label: 'Society Registration Number', value: 'No. 189 of 2023' },
+                  { label: 'Date of Registration', value: '01 August 2023' },
+                  { label: 'Society Category', value: 'Welfare Associations' },
+                  { label: 'Registration District', value: 'Srikakulam, Andhra Pradesh' },
+                  { label: 'Application No.', value: 'SCR01230005266' },
+                  { label: 'Registered Address', value: '1-194, Sancham, Ranastalam, Srikakulam, Andhra Pradesh — 532409' },
+                ].map((row, i) => (
+                  <div key={i} className="bg-white rounded-xl p-4" style={{border:`1px solid ${CB}`}}>
+                    <div className="text-xs font-bold uppercase tracking-wide text-gray-400 mb-1">{row.label}</div>
+                    <div className="text-sm font-semibold text-gray-900 leading-relaxed">{row.value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {showCert && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4 py-8" onClick={() => setShowCert(false)}>
+          <div className="max-w-4xl w-full max-h-full overflow-auto" onClick={e => e.stopPropagation()}>
+            <img src={certificate} alt="Certificate of Registration" className="w-full rounded-lg" />
+            <button onClick={() => setShowCert(false)} className="mt-4 w-full py-3 bg-white font-bold rounded-xl" style={{color:C}}>Close</button>
+          </div>
+        </div>
+      )}
+
+      {/* Values */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="font-bold text-sm uppercase tracking-widest" style={{color:C}}>What Drives Us</span>

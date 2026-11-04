@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import UpiPayBox from './UpiPayBox';
 const logo = require('../img/charitylogo1.jpeg');
 
 const links = [
@@ -23,6 +24,7 @@ function DonateModal({ onClose }) {
           <p className="text-sm font-bold" style={{color:'#293939'}}>❤️ 97% goes directly to the community</p>
           <p className="text-xs mt-1" style={{color:'#3d6060'}}>FCRA Registered · Fully Audited · Complete Transparency</p>
         </div>
+        <UpiPayBox copied={copied} onCopy={copy} />
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5 mb-5">
           <div className="font-bold text-gray-900 text-sm mb-3">🏦 Bank Transfer (NEFT / IMPS / RTGS)</div>
           <div className="flex flex-col gap-2">
@@ -104,7 +106,7 @@ export default function Navbar({ current, navigate }) {
                 style={{background:'#293939'}}
                 onMouseEnter={e => e.currentTarget.style.background='#1e2d2d'}
                 onMouseLeave={e => e.currentTarget.style.background='#293939'}>
-                Get Involved
+                Donate Now
               </button>
             </div>
 
@@ -131,7 +133,7 @@ export default function Navbar({ current, navigate }) {
               <button onClick={() => { setShowDonate(true); setOpen(false); }}
                 className="mt-2 px-4 py-3 text-white text-sm font-bold rounded-xl transition-colors text-center"
                 style={{background:'#293939'}}>
-                Get Involved
+                Donate Now
               </button>
             </div>
           </div>

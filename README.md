@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# VS Helping Hands Welfare Association
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Public site: [https://vshelpinghands.org](https://vshelpinghands.org)
 
-## Available Scripts
+## Accounts and consoles
 
-In the project directory, you can run:
+Sign in with the **Google account** that owns the site. Do **not** write passwords, app passwords, or API keys in this file or commit them to git.
 
-### `npm start`
+| Service | ID / email | Open |
+| --- | --- | --- |
+| Contact email | `Vshelpinghands17@gmail.com` | [Gmail](https://mail.google.com) |
+| Firebase project | `vshelpinghands-4bd08` | [Firebase Console](https://console.firebase.google.com/project/vshelpinghands-4bd08/overview) |
+| Firebase Hosting | same project | [Hosting](https://console.firebase.google.com/project/vshelpinghands-4bd08/hosting) |
+| Firebase default URL | `https://vshelpinghands-4bd08.web.app` | [Open](https://vshelpinghands-4bd08.web.app) |
+| Custom domain | `vshelpinghands.org` | [Open](https://vshelpinghands.org) |
+| Google Search Console | property `https://vshelpinghands.org/` | [Search Console](https://search.google.com/search-console?resource_id=https://vshelpinghands.org/) |
+| Bing Webmaster | `vshelpinghands.org` | [Bing Webmaster](https://www.bing.com/webmasters) |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+CLI login (browser Google sign-in, no password in this repo):
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```powershell
+firebase login
+```
 
-### `npm test`
+## WhatsApp / phone (public on the site)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- WhatsApp / phone: `+91 9391303824`
 
-### `npm run build`
+## Run locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```powershell
+cd D:\Helpinghands\vshelpinghands
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+App: [http://localhost:3000](http://localhost:3000)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deploy (Firebase Hosting)
 
-### `npm run eject`
+```powershell
+cd D:\Helpinghands\vshelpinghands
+npm run build
+firebase deploy --only hosting
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+After deploy, hard-refresh https://vshelpinghands.org (`Ctrl+Shift+R`).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Private passwords (do not commit)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Keep these only on paper / a password manager. If you add them below, do not push this file to GitHub.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Google / Gmail password:
+- Firebase (same Google account):
+- Domain registrar login:
+- Search Console / Bing: same Google account

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import UpiPayBox from '../components/UpiPayBox';
 
 const C = '#293939';
 const CL = '#eef3f3';
@@ -81,6 +82,7 @@ function DonateModal({ onClose }) {
           <p className="text-sm font-bold" style={{color:C}}>❤️ 97% goes directly to the community</p>
           <p className="text-xs mt-1" style={{color:CA}}>FCRA Registered · Fully Audited · Complete Transparency</p>
         </div>
+        <UpiPayBox copied={copied} onCopy={copy} accent={C} />
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5 mb-5">
           <div className="font-bold text-gray-900 text-sm mb-3">🏦 Bank Transfer (NEFT / IMPS / RTGS)</div>
           <div className="flex flex-col gap-2">
